@@ -1,0 +1,162 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
+\usepackage[absolute, overlay]{textpos}
+\usepackage{subfig}
+
+\usepackage{lipsum}
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{1mm}
+\textblockorigin{0mm}{0mm}
+
+\title{Title 1 \\ Monitoring autophagy in the pig heart during ischemia}
+\subtitle{Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.}
+\author{Jørgen Aarmo Lund}
+\institute{Machine Learning Group, UiT The Arctic University of Norway}
+\date{October 2021}
+
+\setbeamertemplate{title page}
+{
+    \begin{minipage}[tl]{0.7\textwidth}
+        \LARGE \inserttitle
+        
+        \Large \insertsubtitle
+    \end{minipage}
+    % Add a vertical rule to delineate title and author box:
+    \begin{minipage}[tc]{0.05\textwidth}
+        \centering
+        \rule{1pt}{70mm}
+    \end{minipage}
+    \begin{minipage}[tl]{0.2\textwidth}
+        \textbf{\insertauthor}
+        
+        \insertinstitute
+    \end{minipage}
+}
+
+\setbeamertemplate{footline}
+{
+}
+
+\setbeamertemplate{caption}[numbered]
+
+\begin{document}
+
+\begin{frame}
+    % Header block
+    \begin{textblock*}{787mm}(27mm, 54mm)
+        \maketitle
+    \end{textblock*}
+    % The horizontal line starting the main block.
+    \begin{textblock*}{787mm}(27mm, 190mm)
+        \rule{\textwidth}{1pt}
+    \end{textblock*}
+    
+    % Left-adjusted block
+    \begin{textblock*}{257mm}(27mm, 205mm)
+        \begin{minipage}[t][880mm][t]{\textwidth}
+            % The main poster text goes here.
+            
+            \begin{block}{Heading 1}
+                \lipsum[1-2]
+            \end{block}
+            \begin{block}{Heading 2}
+                \lipsum[3-4]
+            \end{block}
+                    
+        \end{minipage}
+    \end{textblock*}
+    
+    % Main block
+    \begin{textblock*}{514mm}(297mm, 205mm)
+        \begin{minipage}[t][569mm][t]{\textwidth}
+            % The main figure or results go here.
+            \begin{block}{Main figure}
+                \begin{figure}
+                    \centering
+                    \includegraphics[width=\textwidth, height=560mm]{images/logo-ml.png}
+                    \caption{Caption}
+                    \label{fig:header_fig}
+                \end{figure}
+                
+            \vfill
+            \end{block}
+        \end{minipage}
+    \end{textblock*}
+    
+    % Subfigure 1
+    
+    \begin{textblock*}{249mm}(296mm, 817mm)
+        \begin{minipage}[t][165mm][t]{\textwidth}
+        
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth, height=165mm, keepaspectratio]{images/logo-ml.png}
+                \caption{Caption}
+                \label{fig:subfigure1}
+            \end{figure}
+        \end{minipage}
+    \end{textblock*}
+    
+    % Subfigure 2
+    \begin{textblock*}{249mm}(561mm, 817mm)
+        \begin{minipage}[t][165mm][t]{\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth, height=165mm, keepaspectratio]{images/logo-ml.png}
+                \caption{Caption}
+                \label{fig:subfigure2}
+            \end{figure}
+        \end{minipage}
+    \end{textblock*}
+    
+    % References 1
+    \begin{textblock*}{249mm}(296mm, 1034mm)
+        \begin{minipage}[t][50mm][t]{\textwidth}
+            \begin{block}{\small References 1}
+                \small Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            \end{block}
+        \end{minipage}
+    \end{textblock*}
+    
+    % References 2
+    \begin{textblock*}{249mm}(561mm, 1034mm)
+        \begin{minipage}[t][50mm][t]{\textwidth}
+            \begin{block}{\small References 2}
+                \small Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            \end{block}
+        \end{minipage}
+    \end{textblock*}
+    
+    
+    % The horizontal line starting the footer.
+    \begin{textblock*}{742mm}(40mm, 1110mm)
+        \rule{\textwidth}{1pt}
+    \end{textblock*}
+    % The footer images
+    \begin{textblock*}{841mm}(0mm, 1120mm)
+        % We give the images' minipages slightly different widths
+        % instead of just giving them an even quarter of the footer each
+        % so the spacing is a bit more even.
+        \begin{minipage}[tc]{0.33\textwidth}
+            \centering
+            \includegraphics[width=\textwidth, height=60mm,keepaspectratio]{images/logo-visual-intelligence.png}
+        \end{minipage}
+        \begin{minipage}[tc]{0.15\textwidth}
+            \centering
+            \includegraphics[width=\textwidth,height=60mm,keepaspectratio]{images/logo-cri.png}
+        \end{minipage}
+        \begin{minipage}[tc]{0.22\textwidth}
+            \centering
+            \includegraphics[width=\textwidth,height=60mm,keepaspectratio]{images/logo-ml.png}
+        \end{minipage}
+        \begin{minipage}[tc]{0.22\textwidth}
+            \centering
+            \includegraphics[width=\textwidth,height=60mm,keepaspectratio]{images/logo-uit.png}
+        \end{minipage}
+        % 0.35 0.15 0.22 0.22
+    \end{textblock*}
+    
+\end{frame}
+
+\end{document}
